@@ -21,7 +21,6 @@ project "GLFW"
 		pic "On"
 
 		systemversion "latest"
-		staticruntime "On"
 
 		files
 		{
@@ -43,9 +42,9 @@ project "GLFW"
 		}
 
 	filter "system:windows"
+		staticruntime "Off"  
 		systemversion "latest"
-		staticruntime "On"
-
+		buildoptions { "-std=c11","-lgdi32" }
 		files
 		{
 			"src/win32_init.c",
