@@ -1,10 +1,10 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "On"  
+	staticruntime "On"
 
 	targetdir (targetDirGeneral)
-    objdir (objdirGeneral)
+	objdir (objdirGeneral)
 
 	files
 	{
@@ -44,7 +44,7 @@ project "GLFW"
 
 	filter "system:windows"
 		systemversion "latest"
-		buildoptions { "-std=c11","-lgdi32" }
+		--buildoptions { "-std=c11","-lgdi32" }
 		files
 		{
 			"src/win32_init.c",
